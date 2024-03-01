@@ -17,3 +17,10 @@ map("t", "<Esc>", "<C-\\><C-n>")
 -- yank into clipboard
 map("n", "<leader>y", "\"+y")
 map("v", "<leader>y", "\"+y")
+
+map("n", "<leader>p", "\"+p")
+
+map("n", "<C-l>", "<C-w>l")
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
