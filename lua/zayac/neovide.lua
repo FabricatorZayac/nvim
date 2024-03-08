@@ -1,4 +1,6 @@
 -- Stolen graciously from netfri25/neovim-config
+if vim.g.neovide then
+
 vim.g.neovide_refresh_rate = 144
 vim.g.neovide_fullscreen = false
 vim.g.neovide_no_idle = false
@@ -44,3 +46,5 @@ ResetGuiFont()
 -- Keymaps
 vim.keymap.set({ "n", "i", "v" }, "<C-=>", function() ResizeGuiFont(1) end, { silent = true, desc = "Decrease GUI font size" })
 vim.keymap.set({ "n", "i", "v" }, "<C-->", function() ResizeGuiFont(-1) end, { silent = true, desc = "Increase GUI font size" })
+
+end

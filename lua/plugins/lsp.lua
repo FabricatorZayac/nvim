@@ -139,6 +139,9 @@ return {
     require("mason").setup()
     require('mason-tool-installer').setup {}
     require('mason-lspconfig').setup {
+      ensure_installed = {
+        "lua_ls",
+      },
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}

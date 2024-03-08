@@ -6,6 +6,7 @@ local function extensions() return require("telescope").extensions end
 
 return {
   "nvim-telescope/telescope.nvim",
+  lazy = true,
 
   branch = "0.1.x",
   dependencies = {
