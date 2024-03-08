@@ -1,3 +1,4 @@
+-- Stolen graciously from netfri25/neovim-config
 vim.g.neovide_refresh_rate = 144
 vim.g.neovide_fullscreen = false
 vim.g.neovide_no_idle = false
