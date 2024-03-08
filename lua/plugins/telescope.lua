@@ -6,7 +6,6 @@ local function extensions() return require("telescope").extensions end
 
 return {
   "nvim-telescope/telescope.nvim",
-  lazy = true,
 
   branch = "0.1.x",
   dependencies = {
@@ -22,11 +21,11 @@ return {
         builtin().find_files()
       end
     end, desc = "Telescope Find Files" },
-    { "<leader>lg", builtin().live_grep, desc = "Telescope Live Grep" },
-    { "<leader>bb", builtin().buffers, desc = "Telescope Buffers" },
-    { "<leader>fh", builtin().help_tags, desc = "Telescope Help Tags" },
-    { "<M-x>", builtin().command_history, desc = "M-x" },
-    { "<leader>pp", extensions().project.project, "Telescope project" },
+    { "<leader>lg", function () builtin().live_grep() end,          desc = "Telescope Live Grep" },
+    { "<leader>bb", function () builtin().buffers() end,            desc = "Telescope Buffers" },
+    { "<leader>fh", function () builtin().help_tags() end,          desc = "Telescope Help Tags" },
+    { "<M-x>",      function () builtin().command_history() end,    desc = "M-x" },
+    { "<leader>pp", function () extensions().project.project() end, desc = "Telescope project" },
   },
 
   config = function()

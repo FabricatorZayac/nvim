@@ -12,7 +12,7 @@ return {
   },
   {
     "aserowy/tmux.nvim",
-    config = require("tmux").setup,
+    config = function() require("tmux").setup() end,
   },
   {
     'akinsho/toggleterm.nvim',
