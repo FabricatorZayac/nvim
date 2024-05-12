@@ -14,9 +14,9 @@ return {
     "aserowy/tmux.nvim",
     config = function() require("tmux").setup() end,
   },
+  "hiphish/rainbow-delimiters.nvim",
   {
-    'akinsho/toggleterm.nvim',
-    version = "*",
-    config = true,
+    "RaafatTurki/hex.nvim",
+    config = function () require("hex").setup() end,
   },
 }
