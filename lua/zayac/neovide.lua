@@ -14,9 +14,9 @@ vim.g.neovide_cursor_vfx_particle_lifetime = 0.8
 vim.g.neovide_profiler = false
 vim.g.neovide_remember_window_size = true
 
-vim.g.gui_font_default_size = 11
+vim.g.gui_font_default_size = 8
 vim.g.gui_font_size = vim.g.gui_font_default_size
-vim.g.gui_font_face = "Source Code Pro"
+vim.g.gui_font_face = "Iosevka Nerd Font"
 vim.g.gui_antialiasing = "antialias"
 vim.g.gui_hinting = "normal"
 

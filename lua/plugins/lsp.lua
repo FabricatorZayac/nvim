@@ -69,7 +69,9 @@ return {
         --  For example, in C this would take you to the header
         map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
-        map("<leader>ih", function() vim.lsp.inlay_hint(0) end, "[I]nlay [H]ints")
+        map("<leader>ih", function()
+          vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+        end, "[I]nlay [H]ints")
 
         -- The following two autocommands are used to highlight references of the
         -- word under your cursor when your cursor rests there for a little while.
@@ -134,11 +136,31 @@ return {
           },
         },
       },
+      texlab = {
+        settings = {
+          texlab = {
+            build = {
+              executable = "tectonic",
+              -- args = { "-X", "build", "--keep-logs", "--keep-intermediates" },
+              args = { "%f", "--synctex", "--keep-logs", "--keep-intermediates" },
+              forwardSearchAfter = true,
+              auxDirectory = "build/default/",
+              pdfDirectory = "build/default/",
+              onSave = true,
+            },
+            forwardSearch = {
+                executable = "zathura",
+                args = { "--synctex-forward", "%l:1:%f", "%p" },
+            },
+          }
+        }
+      }
     }
 
     require("mason").setup()
     require('mason-tool-installer').setup {}
     require('mason-lspconfig').setup {
+      automatic_installation = false,
       ensure_installed = {
         "lua_ls",
       },

@@ -15,8 +15,8 @@ return {
     config = function() require("tmux").setup() end,
   },
   "hiphish/rainbow-delimiters.nvim",
-  {
-    "RaafatTurki/hex.nvim",
-    config = function () require("hex").setup() end,
-  },
+  -- {
+  --   "RaafatTurki/hex.nvim",
+  --   config = function () require("hex").setup() end,
+  -- },
 }
